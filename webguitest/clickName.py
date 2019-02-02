@@ -39,8 +39,8 @@ if seleniumAvailable:
         if elemToClick is None:
             print("    (x): could not locate name={}".format(elementName))
             return False
-        elemToEnter.click()
-        print("    (✓): entered {} into {}".format(textcontent, elementName))
+        elemToClick.click()
+        print("    (✓): clicked on {}".format(elementName))
         return True
 
 else:
