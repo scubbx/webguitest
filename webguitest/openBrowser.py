@@ -20,9 +20,9 @@ except ImportError:
 if seleniumAvailable:
     def openBrowser(url,x,y):
         driver = webdriver.Firefox()
-        driver.get(url)
         driver.set_window_size(x, y)
         driver.set_window_position(0, 0)
+        driver.get(url)
         return driver
 elif pyautoguiAvailable:
     def openBrowser(url,x,y):
