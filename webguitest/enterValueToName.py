@@ -8,14 +8,14 @@ seleniumAvailable = False
 try:
     import pyautogui
     pyautoguiAvailable = True
-except ModuleNotFoundError:
+except ImportError:
     pass
 
 try:
     import selenium
     from selenium.webdriver.common.keys import Keys
     seleniumAvailable = True
-except ModuleNotFoundError:
+except ImportError:
     pass
 
 

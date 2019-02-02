@@ -8,13 +8,13 @@ seleniumAvailable = False
 try:
     import pyautogui
     pyautoguiAvailable = True
-except ModuleNotFoundError:
+except ImportError:
     pass
 
 try:
     import selenium
     seleniumAvailable = True
-except ModuleNotFoundError:
+except ImportError:
     pass
 
 if seleniumAvailable:

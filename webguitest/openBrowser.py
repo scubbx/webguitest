@@ -8,13 +8,13 @@ seleniumAvailable = False
 try:
     import pyautogui
     pyautoguiAvailable = True
-except ModuleNotFoundError:
+except ImportError:
     pass
 
 try:
     from selenium import webdriver
     seleniumAvailable = True
-except ModuleNotFoundError:
+except ImportError:
     pass
 
 if seleniumAvailable:
@@ -27,4 +27,8 @@ if seleniumAvailable:
 elif pyautoguiAvailable:
     def openBrowser(url,x,y):
         print("pyautogui method to open Browser is yet to be implemented")
+        return False
+else:
+    def openBrowser(url,x,y):
+        print("you either need 'selenium' or 'pyautogui' installed to use 'openBrowser'")
         return False
