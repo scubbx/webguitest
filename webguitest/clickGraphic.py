@@ -44,5 +44,5 @@ if pyautoguiAvailable:
         return True
 else:
     def clickGraphic(imagepath,delay=10,confidence=1):
-        print("ERROR: no module 'pyautogui' - 'clickElement()' is not available")
+        print("ERROR: no module 'pyautogui' - 'clickGraphic()' is not available")
         return False
