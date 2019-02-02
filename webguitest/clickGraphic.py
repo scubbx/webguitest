@@ -45,4 +45,5 @@ if pyautoguiAvailable:
 else:
     def clickGraphic(imagepath,delay=10,confidence=1):
         print("ERROR: no module 'pyautogui' - 'clickGraphic()' is not available")
+        print("       maybe you missed to also install the 'Xlib' library on which pyautogui depends on")
         return False
