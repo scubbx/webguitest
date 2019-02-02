@@ -3,5 +3,6 @@
 
 from webguitest.openBrowser import *
 from webguitest.clickGraphic import *
+from webguitest.clickName import *
 from webguitest.getValueFromName import *
 from webguitest.enterValueToName import *
