@@ -35,7 +35,7 @@ if pyautoguiAvailable:
                 numTries += 1
                 time.sleep(1)
         if elemToClick is None:
-            print("    (x): could not locate image {}".format(elemToClick))
+            print("    (x): could not locate image {}".format(imagepath))
             return False
         time.sleep(1)
         pyautogui.click(pyautogui.center(elemToClick))
