@@ -27,7 +27,6 @@ if seleniumAvailable:
         while (elemToClick is None) and (numTries < delay):
             try:
                 elemToClickResults = driver.find_elements_by_xpath("//*[text() = '{}']".format(elementText))
-                print(elemToClickResults)
                 elemToClick = elemToClickResults[0]
                 if len(elemToClickResults) > 1: 
                     print("        found multiple '{}' - selecting only the first one".format(elementText))
