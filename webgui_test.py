@@ -46,7 +46,15 @@ import webguitest
 if __name__ == "__main__":
     print("Running tests ...")
     
-    firefox = webguitest.openBrowser("http://zlhrtu.bev.gv.at/at.gv.bev.zlhr-test/application/zlhr?center=1486000,6064000&scale=17062",1400,1024)
-    #webguitest.clickGraphic("manue.png",2)
+    firefox = webguitest.openBrowser("http://www.bev.gv.at",1200,600)
     #webguitest.getValueFromName(firefox,"asdf",2)
-    webguitest.enterValueToName(firefox,"_username","testuser",True)
+    webguitest.clickName(firefox,"V")
+    webguitest.clickGraphic("internal_shop.png",2)
+    webguitest.clickGraphic("internal_bevshop.png",2)
+    webguitest.enterValueToName(firefox,"katastralgemeinde","45313",False)
+    webguitest.enterValueToName(firefox,"grundstuecksnummer","100",False)
+    webguitest.clickName(firefox,"anzeigenBtn")
+    webguitest.setValueOfName(firefox,"hierarchies","Orthophotos A4")
+    webguitest.clickName(firefox,"suchenBtn")
+    
+    #firefox.close()
