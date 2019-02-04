@@ -13,7 +13,7 @@ Selenium is a web testing framework used to auto-perform interactions with websi
 
 You need to install the selenium driver for python
 
-  pip install selenium
+    pip install selenium
 
 and download the so-called ''geckodriver'' for Selenium to let it interact with an existing installation of the FireFox browser. You can find the current version of the ''geckodriver'' here: https://github.com/mozilla/geckodriver/releases
 You have to unpack it and copy the file to a location where your python installation can find the file (e.g. somewhere in your systems $PATH).
@@ -22,14 +22,14 @@ You have to unpack it and copy the file to a location where your python installa
 
 The pyautogui library is simply installed by
 
-  pip install pyautogui
+    pip install pyautogui
 
 On Linux you additionally need to install the Xlib libary with
 
-  pip install xlib
+    pip install xlib
 
 and the scrot program for taking screenshots:
 
-  apt install scrot
+    apt install scrot
 
 
