@@ -28,3 +28,4 @@ from webguitest.clickName import *
 from webguitest.getValueFromName import *
 from webguitest.enterValueToName import *
 from webguitest.setValueOfName import *
+from webguitest.clickTextElement import *
