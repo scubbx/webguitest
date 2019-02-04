@@ -1,5 +1,5 @@
 # Test data
-internal_*
+#internal_*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
