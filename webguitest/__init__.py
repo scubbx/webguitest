@@ -33,3 +33,4 @@ from webguitest.setValueOfName import *
 from webguitest.clickTextElement import *
 from webguitest.enterValueToGraphic import *
 from webguitest.enterValue import *
+from webguitest.checkGraphic import *
