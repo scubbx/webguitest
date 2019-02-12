@@ -32,4 +32,4 @@ from webguitest.enterValueToName import *
 from webguitest.setValueOfName import *
 from webguitest.clickTextElement import *
 from webguitest.enterValueToGraphic import *
-
+from webguitest.enterValue import *
