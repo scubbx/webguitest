@@ -32,4 +32,12 @@ and the scrot program for taking screenshots:
 
     apt install scrot
 
+## Changelog
 
+### 0.0.2
+
+Added "enterValueToGraphic" function
+
+### 0.0.1
+
+First release

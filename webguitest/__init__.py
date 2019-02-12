@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
+name = "webguitest"
+
 """
 ----------------------------------------------------------------------
 This is the WebGuiTest module.
@@ -29,3 +31,5 @@ from webguitest.getValueFromName import *
 from webguitest.enterValueToName import *
 from webguitest.setValueOfName import *
 from webguitest.clickTextElement import *
+from webguitest.enterValueToGraphic import *
+

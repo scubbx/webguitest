@@ -47,7 +47,9 @@ if __name__ == "__main__":
     print("Running tests ...")
     
     firefox = webguitest.openBrowser("http://www.bev.gv.at",1200,600)
+    webguitest.enterValueToGraphic("adressbar.png","www.google.com")
     #webguitest.getValueFromName(firefox,"asdf",2)
+    """
     webguitest.clickName(firefox,"V")
     webguitest.clickTextElement(firefox,"Shops & Services")
     #webguitest.clickGraphic("shop.png",2)
@@ -58,5 +60,5 @@ if __name__ == "__main__":
     webguitest.clickName(firefox,"anzeigenBtn")
     webguitest.setValueOfName(firefox,"hierarchies","Orthophotos A4")
     webguitest.clickName(firefox,"suchenBtn")
-    
+    """
     #firefox.close()

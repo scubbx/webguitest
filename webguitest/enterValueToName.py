@@ -47,6 +47,6 @@ if seleniumAvailable:
         return True
 
 else:
-    def enterValueToName(driver,elementName,pressEnter=False,delay=10):
+    def enterValueToName(driver,elementName,textcontent,pressEnter=False,delay=10):
         print("ERROR: no module 'selenium' - 'enterValueToName()' is not available")
         return False
