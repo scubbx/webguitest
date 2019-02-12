@@ -36,8 +36,8 @@ and the scrot program for taking screenshots:
 
 ### 0.0.2
 
-Added "enterValueToGraphic" function
-
+  * Added "enterValueToGraphic" function
+  * Added "enterValue" function
 ### 0.0.1
 
-First release
+  * First release
