@@ -27,7 +27,7 @@ if pyautoguiAvailable:
         time.sleep(1)
         return True
 else:
-    def def enterValue(textcontent,pressEnter=False,delay=10):
+    def enterValue(textcontent,pressEnter=False,delay=10):
         print("ERROR: no module 'pyautogui' - 'clickGraphic()' is not available")
         print("       maybe you missed to also install the 'Xlib' library on which pyautogui depends on")
         return False

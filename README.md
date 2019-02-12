@@ -34,6 +34,10 @@ and the scrot program for taking screenshots:
 
 ## Changelog
 
+### 0.0.5
+
+  * corrected error
+
 ### 0.0.4
 
   * Added "checkGraphic" function
