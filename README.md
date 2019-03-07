@@ -34,6 +34,10 @@ and the scrot program for taking screenshots:
 
 ## Changelog
 
+### 0.0.7
+
+  * added "getTextFromName" method to get text content of a named HTML element
+
 ### 0.0.6
 
   * increased time to wait between tries from 1 seconds to 2 seconds when searching for graphical elements
