@@ -34,7 +34,7 @@ and the scrot program for taking screenshots:
 
 ## Changelog
 
-### 0.0.9
+### 0.0.9 / 0.0.10
 
   * added "moveGraphic" method to drag-and-drop
 

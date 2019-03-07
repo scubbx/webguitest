@@ -38,7 +38,7 @@ if pyautoguiAvailable:
             print("    (x): could not locate image {}".format(imagepath))
             return False
         time.sleep(1)
-        pyautogui.click(pyautogui.center(elemToClick))
+        pyautogui.mouseDown(pyautogui.center(elemToClick))
         pyautogui.mouseUp(x,y)
         print("    (✓): moved {}".format(elemToClick))
         time.sleep(1)
