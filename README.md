@@ -34,7 +34,11 @@ and the scrot program for taking screenshots:
 
 ## Changelog
 
-### 0.0.7
+### 0.0.9
+
+  * added "moveGraphic" method to drag-and-drop
+
+### 0.0.7 / 0.0.8
 
   * added "getTextFromName" method to get text content of a named HTML element
 

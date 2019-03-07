@@ -28,10 +28,11 @@ from webguitest.openBrowser import *
 from webguitest.clickGraphic import *
 from webguitest.clickName import *
 from webguitest.getValueFromName import *
-from webguitest.getValueFromText import *
+from webguitest.getTextFromName import *
 from webguitest.enterValueToName import *
 from webguitest.setValueOfName import *
 from webguitest.clickTextElement import *
 from webguitest.enterValueToGraphic import *
 from webguitest.enterValue import *
 from webguitest.checkGraphic import *
+from webguitest.moveGraphic import *
