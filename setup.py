@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="webguitest-scubbx",
-    version="0.0.8",
+    version="0.0.9",
     author="Markus Mayr",
     author_email="markusmayr@gmx.net",
     description="A web user interface test module combining Selenium and pyautogui into one interface ",
