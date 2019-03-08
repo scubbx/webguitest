@@ -28,6 +28,8 @@ if seleniumAvailable:
             except Exception as exp:
                 if isinstance(exp, selenium.common.exceptions.NoSuchElementException):
                     if debug: print("    ({}) locating {} ...".format(numTries,elementName))
+                elif isinstance(exp, selenium.common.exceptions.ElementNotInteractableException):
+                    if debug: print("    ({}) locating {} ...".format(numTries,elementName))
                 else:
                     if debug: print(exp)
                     break

@@ -32,7 +32,9 @@ if seleniumAvailable:
                     if debug: print("        found multiple '{}' - selecting only the first one".format(elementText))
             except Exception as exp:
                 if isinstance(exp, selenium.common.exceptions.NoSuchElementException):
-                    if debug: print("     {}  locating {} ...".format(numTries,elementText))
+                    if debug: print("    ({}) locating {} ...".format(numTries,elementName))
+                elif isinstance(exp, selenium.common.exceptions.ElementNotInteractableException):
+                    if debug: print("    ({}) locating {} ...".format(numTries,elementName))
                 else:
                     if debug: print(exp)
                     break

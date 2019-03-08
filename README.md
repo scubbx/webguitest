@@ -34,6 +34,10 @@ and the scrot program for taking screenshots:
 
 ## Changelog
 
+### 0.0.13
+
+  * also retry when selenium element is not yet loaded
+
 ### 0.0.12
 
   * added "debug" option to methods to allow for surpression of console-output by the testing methods
