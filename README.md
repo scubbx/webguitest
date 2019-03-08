@@ -34,6 +34,10 @@ and the scrot program for taking screenshots:
 
 ## Changelog
 
+### 0.0.11
+
+  * introduced paremeter "waitbetweentries" to let user specify the time to wait between retries when dealing with graphical methods
+
 ### 0.0.9 / 0.0.10
 
   * added "moveGraphic" method to drag-and-drop

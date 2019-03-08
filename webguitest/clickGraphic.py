@@ -18,7 +18,7 @@ except ImportError:
     pass
 
 if pyautoguiAvailable:
-    def clickGraphic(imagepath,delay=10,confidence=1):
+    def clickGraphic(imagepath,delay=10,confidence=1,waitbetweentries=1):
         elemToClick = None
         numTries = 1
         print("    (0): locating {} ...".format(imagepath))
@@ -33,7 +33,7 @@ if pyautoguiAvailable:
                     break
             finally:
                 numTries += 1
-                time.sleep(2)
+                time.sleep(waitbetweentries)
         if elemToClick is None:
             print("    (x): could not locate image {}".format(imagepath))
             return False
