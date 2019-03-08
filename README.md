@@ -34,6 +34,10 @@ and the scrot program for taking screenshots:
 
 ## Changelog
 
+### 0.0.12
+
+  * added "debug" option to methods to allow for surpression of console-output by the testing methods
+
 ### 0.0.11
 
   * introduced paremeter "waitbetweentries" to let user specify the time to wait between retries when dealing with graphical methods

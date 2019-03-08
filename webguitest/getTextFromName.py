@@ -18,28 +18,28 @@ except ImportError:
     pass
 
 if seleniumAvailable:
-    def getTextFromName(driver,elementName,delay=10):
+    def getTextFromName(driver,elementName,delay=10,debug=False):
         numTries = 1
         elemToExtract = None
-        print("    (0): locating {} ...".format(elementName))
+        if debug: print("    (0): locating {} ...".format(elementName))
         while (elemToExtract is None) and (numTries < delay):
             try:
                 elemToExtract = driver.find_element_by_name(elementName)
             except Exception as exp:
                 if isinstance(exp, selenium.common.exceptions.NoSuchElementException):
-                    print("    ({}) locating {} ...".format(numTries,elementName))
+                    if debug: print("    ({}) locating {} ...".format(numTries,elementName))
                 else:
-                    print(exp)
+                    if debug: print(exp)
                     break
             finally:
                 numTries += 1
                 time.sleep(1)
         if elemToExtract is None:
-            print("    (x): could not locate name={}".format(elementName))
+            if debug: print("    (x): could not locate name={}".format(elementName))
             return False
         return elemToExtract.text
 
 else:
-    def getTextFromName(elementName,delay=10):
-        print("ERROR: no module 'selenium' - 'getValueFromName()' is not available")
+    def getTextFromName(driver,elementName,delay=10,debug=False):
+        if debug: print("ERROR: no module 'selenium' - 'getValueFromName()' is not available")
         return False

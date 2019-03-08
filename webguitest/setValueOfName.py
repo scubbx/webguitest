@@ -19,31 +19,31 @@ except ImportError:
     pass
 
 if seleniumAvailable:
-    def setValueOfName(driver,elementName,valueToSet,delay=10):
+    def setValueOfName(driver,elementName,valueToSet,delay=10,debug=False):
         numTries = 1
         elemToSet = None
-        print("    (0): locating {} ...".format(elementName))
+        if debug: print("    (0): locating {} ...".format(elementName))
         while (elemToSet is None) and (numTries < delay):
             try:
                 elemToSet = Select(driver.find_element_by_name(elementName))
             except Exception as exp:
                 if isinstance(exp, selenium.common.exceptions.NoSuchElementException):
-                    print("    ({}) locating {} ...".format(numTries,elementName))
+                    if debug: print("    ({}) locating {} ...".format(numTries,elementName))
                 else:
-                    print(exp)
+                    if debug: print(exp)
                     break
             finally:
                 numTries += 1
                 time.sleep(1)
         if elemToSet is None:
-            print("    (x): could not locate name={}".format(elementName))
+            if debug: print("    (x): could not locate name={}".format(elementName))
             return False
         elemToSet.select_by_visible_text(valueToSet)
-        print("    (✓): set '{}' to '{}'".format(elementName,valueToSet))
+        if debug: print("    (✓): set '{}' to '{}'".format(elementName,valueToSet))
         time.sleep(1)
         return True
 
 else:
-    def setValueOfName(driver,elementName,valueToSet,delay=10):
-        print("ERROR: no module 'selenium' - 'setValueOfName()' is not available")
+    def setValueOfName(driver,elementName,valueToSet,delay=10,debug=False):
+        if debug: print("ERROR: no module 'selenium' - 'setValueOfName()' is not available")
         return False

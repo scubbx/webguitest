@@ -20,30 +20,30 @@ except ImportError:
 
 
 if seleniumAvailable:
-    def clickName(driver,elementName,delay=10):
+    def clickName(driver,elementName,delay=10,debug=False):
         numTries = 1
         elemToClick = None
-        print("    (0): locating {} ...".format(elementName))
+        if debug: print("    (0): locating {} ...".format(elementName))
         while (elemToClick is None) and (numTries < delay):
             try:
                 elemToClick = driver.find_element_by_name(elementName)
             except Exception as exp:
                 if isinstance(exp, selenium.common.exceptions.NoSuchElementException):
-                    print("    ({}) locating {} ...".format(numTries,elementName))
+                    if debug: print("    ({}) locating {} ...".format(numTries,elementName))
                 else:
-                    print(exp)
+                    if debug: print(exp)
                     break
             finally:
                 numTries += 1
                 time.sleep(1)
         if elemToClick is None:
-            print("    (x): could not locate name={}".format(elementName))
+            if debug: print("    (x): could not locate name={}".format(elementName))
             return False
         elemToClick.click()
-        print("    (✓): clicked on {}".format(elementName))
+        if debug: print("    (✓): clicked on {}".format(elementName))
         return True
 
 else:
-    def clickName(driver,elementName,delay=10):
-        print("ERROR: no module 'selenium' - 'enterValueToName()' is not available")
+    def clickName(driver,elementName,delay=10,debug=False):
+        if debug: print("ERROR: no module 'selenium' - 'enterValueToName()' is not available")
         return False
