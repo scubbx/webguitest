@@ -18,7 +18,7 @@ except ImportError:
     pass
 
 if pyautoguiAvailable:
-    def moveGraphic(imagepath,x=500,y=500,delay=10,confidence=1,waitbetweentries=1,debug=False):
+    def moveGraphic(imagepath,dx=500,dy=500,delay=10,confidence=1,waitbetweentries=1,debug=False):
         elemToClick = None
         numTries = 1
         if debug: print("    (0): locating {} ...".format(imagepath))
@@ -38,9 +38,9 @@ if pyautoguiAvailable:
             if debug: print("    (x): could not locate image {}".format(imagepath))
             return False
         time.sleep(1)
-        pyautogui.mouseDown(pyautogui.center(elemToClick))
-        time.sleep(1)
-        pyautogui.mouseUp(x,y)
+        clickCenter = pyautogui.center(elemToClick)
+        pyautogui.moveTo(clickCenter.x, clickCenter.y)
+        pyautogui.drag(dx, dy , 1, button='left')
         if debug: print("    (✓): moved {}".format(elemToClick))
         time.sleep(1)
         return True
