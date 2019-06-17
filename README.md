@@ -34,6 +34,10 @@ and the scrot program for taking screenshots:
 
 ## Changelog
 
+### 0.0.15
+
+  * use pyautogui.moveTo instead of manually combining methods to simulate drag-and-drop
+
 ### 0.0.14
 
   * added a delay of one second to moveGraphic
