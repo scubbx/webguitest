@@ -1,5 +1,7 @@
 webguitest.geany
 updatepypi.sh
+test.py
+icon.png
 
 # Test data
 #internal_*
