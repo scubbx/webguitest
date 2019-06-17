@@ -34,6 +34,10 @@ and the scrot program for taking screenshots:
 
 ## Changelog
 
+### 0.0.14
+
+  * added a delay of one second to moveGraphic
+
 ### 0.0.13
 
   * also retry when selenium element is not yet loaded

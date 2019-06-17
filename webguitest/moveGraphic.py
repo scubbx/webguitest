@@ -39,6 +39,7 @@ if pyautoguiAvailable:
             return False
         time.sleep(1)
         pyautogui.mouseDown(pyautogui.center(elemToClick))
+        time.sleep(1)
         pyautogui.mouseUp(x,y)
         if debug: print("    (✓): moved {}".format(elemToClick))
         time.sleep(1)
