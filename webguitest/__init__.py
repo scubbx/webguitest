@@ -13,7 +13,7 @@ The functions available are:
     Returns a selenium FireFox web-driver object to control the browser.
 
 
-  clickGraphic(imagepath,delay=10,confidence=1,waitbetweentries=1,debug=False):
+  clickGraphic(imagepath,delay=10,confidence=1,waitbetweentries=1,doubleclick=False,grayscale=False,debug=False):
     Returns True if successfull, False if not.
 
     imagepath: The path to the image file with contents to be searched on the screen.
@@ -21,6 +21,8 @@ The functions available are:
     confidence: A value between 0 and 1. This allows the image to deviate slightly from the
                 image on the screen. Good for fuzzy matching.
     waitbetweentries: The time to wait between retries in seconds.
+    doubleclick: If True, a double click will be performed instead of a single click.
+    grayscale: True or False to perform a faster grayscale match
     debug: Default is False. If set to True, there will be more detailed console output.
 
   
