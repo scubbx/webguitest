@@ -14,19 +14,23 @@ except ImportError:
 try:
     import selenium
     from selenium.webdriver.common.keys import Keys
+    from selenium.webdriver.support.ui import Select
     seleniumAvailable = True
 except ImportError:
     pass
 
 
 if seleniumAvailable:
-    def enterValueToName(driver,elementName,textcontent,pressEnter=False,delay=10,debug=False):
+    def selectDropdownName(driver,elementName,textToSelect,delay=10,elementnumber=-1,debug=False):
         numTries = 1
-        elemToEnter = None
+        elemToClick = None
         if debug: print("    (0): locating {} ...".format(elementName))
-        while (elemToEnter is None) and (numTries < delay):
+        while (elemToClick is None) and (numTries < delay):
             try:
-                elemToEnter = driver.find_element_by_name(elementName)
+                if elementnumber >= 0:
+                    elemToClick = driver.find_elements_by_name(elementName)[elementnumber]
+                else:
+                    elemToClick = driver.find_element_by_name(elementName)
             except Exception as exp:
                 if isinstance(exp, selenium.common.exceptions.NoSuchElementException):
                     if debug: print("    ({}) locating {} ...".format(numTries,elementName))
@@ -38,17 +42,14 @@ if seleniumAvailable:
             finally:
                 numTries += 1
                 time.sleep(0.5)
-        if elemToEnter is None:
+        if elemToClick is None:
             if debug: print("    (x): could not locate name={}".format(elementName))
             return False
-        elemToEnter.clear()
-        elemToEnter.send_keys(textcontent)
-        if pressEnter:
-            elemToEnter.send_keys(Keys.RETURN)
-        if debug: print("    (✓): entered {} into {}".format(textcontent, elementName))
+        Select(elemToClick).select_by_visible_text(textToSelect)
+        if debug: print("    (✓): selected on {}".format(textToSelect))
         return True
 
 else:
-    def enterValueToName(driver,elementName,textcontent,pressEnter=False,delay=10,debug=False):
+    def selectDropdownName(driver,elementName,textToSelect,delay=10,elementnumber=-1,debug=False):
         if debug: print("ERROR: no module 'selenium' - 'enterValueToName()' is not available")
         return False

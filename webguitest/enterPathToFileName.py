@@ -20,7 +20,7 @@ except ImportError:
 
 
 if seleniumAvailable:
-    def enterValueToName(driver,elementName,textcontent,pressEnter=False,delay=10,debug=False):
+    def enterPathToFileName(driver,elementName,textcontent,pressEnter=False,delay=10,debug=False):
         numTries = 1
         elemToEnter = None
         if debug: print("    (0): locating {} ...".format(elementName))
@@ -41,7 +41,7 @@ if seleniumAvailable:
         if elemToEnter is None:
             if debug: print("    (x): could not locate name={}".format(elementName))
             return False
-        elemToEnter.clear()
+        #elemToEnter.clear()
         elemToEnter.send_keys(textcontent)
         if pressEnter:
             elemToEnter.send_keys(Keys.RETURN)
@@ -49,6 +49,6 @@ if seleniumAvailable:
         return True
 
 else:
-    def enterValueToName(driver,elementName,textcontent,pressEnter=False,delay=10,debug=False):
+    def enterPathToFileName(driver,elementName,textcontent,pressEnter=False,delay=10,debug=False):
         if debug: print("ERROR: no module 'selenium' - 'enterValueToName()' is not available")
         return False

@@ -40,7 +40,7 @@ if seleniumAvailable:
                     break
             finally:
                 numTries += 1
-                time.sleep(1)
+                time.sleep(0.5)
         if elemToClick is None:
             if debug: print("    (x): could not locate name={}".format(elementName))
             return False

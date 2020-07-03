@@ -28,6 +28,8 @@ The functions available are:
   
   clickName():
   
+  clickId():
+
   getValueFromName():
 
   getTextFromName():
@@ -46,6 +48,8 @@ The functions available are:
 
   moveGraphic():
 
+  selectDropdownName():
+
   
 ----------------------------------------------------------------------
 """
@@ -63,3 +67,7 @@ from webguitest.enterValueToGraphic import *
 from webguitest.enterValue import *
 from webguitest.checkGraphic import *
 from webguitest.moveGraphic import *
+from webguitest.selectDropdownName import *
+from webguitest.clickId import *
+from webguitest.clickInputValue import *
+from webguitest.enterPathToFileName import *
