@@ -34,6 +34,10 @@ and the scrot program for taking screenshots:
 
 ## Changelog
 
+### 0.1
+
+  * added various new methods
+
 ### 0.0.15
 
   * use pyautogui.moveTo instead of manually combining methods to simulate drag-and-drop
